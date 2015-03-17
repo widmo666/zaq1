@@ -80,6 +80,12 @@ public class RestController {
 		return employee;
 	}
 
+	@RequestMapping(value = "/string", method = RequestMethod.GET)
+	@ResponseBody
+	public String getTestString() {
+		return "Testowa odpowiedü";
+	}
+
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	@ResponseBody
 	public List<User> getUsers() {
