@@ -5,26 +5,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "user")
-@XmlRootElement(name = "user")
 public class User {
 
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
-	@XmlElement
 	private Long id;
 
 	@Column(name = "password")
-	@XmlElement
 	private String password;
 
+	@Column
+	private String test0924;
+
 	@Column(name = "username")
-	@XmlElement
 	private String username;
 
 	public Long getId() {
@@ -33,6 +30,10 @@ public class User {
 
 	public String getPassword() {
 		return password;
+	}
+
+	public String getTest0924() {
+		return test0924;
 	}
 
 	public String getUsername() {
@@ -45,6 +46,10 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public void setTest0924(String test0924) {
+		this.test0924 = test0924;
 	}
 
 	public void setUsername(String username) {
